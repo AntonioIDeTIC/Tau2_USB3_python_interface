@@ -1,0 +1,11 @@
+GENICAM_ROOT_V3_0=/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib/genicam
+export GENICAM_ROOT_V3_0
+
+WIC_ROOT=/opt/workswell/wic_sdk
+PLEORA_ROOT=/opt/pleora/ebus_sdk/Ubuntu-x86_64/
+GENIROOT=/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib/genicam/bin/Linux64_x64/
+LD_LIBRARY_PATH=${WIC_ROOT}/lib:${PLEORA_ROOT}/lib:${GENIROOT}:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+
+
+
