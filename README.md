@@ -5,7 +5,8 @@ This is a python interface of the wic SDK for the USB3 Tau2 module.
 
 ## 🔧 Dependencies and Installation 
 * Python == 3.9.2
-* pigpio == 1.78.0
+* opencv-python == ??
+* numpy == ??
 
 ## 🚀 Code
 The project was tested on a Ubuntu laptop.
