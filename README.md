@@ -5,7 +5,7 @@ This is a python interface of the wic SDK for the USB3 Tau2 module.
 The USB3 Tau2 from Workswell was used to test this library. The main core has a resolution of 336x256 pixels.
 
 <p align="center" width="100%">
-    <img width="45%" src="images/tau_camera.png"> 
+    <img width="45%" src="images/tau_image.png"> 
 </p>
 
 ## 🔧 Dependencies and Installation 
