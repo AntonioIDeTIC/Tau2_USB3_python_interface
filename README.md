@@ -9,7 +9,7 @@ The USB3 Tau2 from Workswell was used to test this library. The main core has a 
 </p>
 
 ## 🔧 Dependencies and Installation 
-* Python == 3.8.0
+* Python==3.8.0
 * opencv-python==4.10.0.84
 * numpy==1.24.4
 
