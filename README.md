@@ -9,7 +9,7 @@ This is a python interface of the wic SDK for the USB3 Tau2 module.
 * numpy == ??
 
 ## 🚀 Code
-The project was tested on a Ubuntu laptop.
+The project was tested on a Ubuntu laptop. Please, take into account that the WIC SDK version used in this work is 1.2.1, you can get it from the manufacturer's webpage.
 
 
 ## 📜 License
