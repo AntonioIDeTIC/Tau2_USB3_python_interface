@@ -9,9 +9,9 @@ The USB3 Tau2 from Workswell was used to test this library. The main core has a 
 </p>
 
 ## 🔧 Dependencies and Installation 
-* Python==3.8.0
-* opencv-python==4.10.0.84
-* numpy==1.24.4
+* Python == 3.8.0
+* opencv-python == 4.10.0.84
+* numpy == 1.24.4
 
 ## 🚀 Code
 The project was tested on a Ubuntu laptop. Please, take into account that the WIC SDK version used in this work is 1.2.1, you can get it from the manufacturer's webpage. Follow their guidelines to ensure the correct installation of the necessary libraries. 
