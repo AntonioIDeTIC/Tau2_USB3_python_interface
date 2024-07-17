@@ -3,8 +3,18 @@ import os
 import time
 import numpy as np
 import cv2
-import utils
+import matplotlib
 
+def apply_colormap(frame, cmap):
+    frame = np.asarray(normalize(frame, np.min(frame), np.max(frame), 0, 255), dtype=np.uint8)
+    frame = clahe.apply(frame)
+    frame = np.asarray(normalize(frame, np.min(frame), np.max(frame), 0, 1.0), dtype=np.float32)
+
+    color = matplotlib.colormaps.get_cmap(cmap)
+    frame = np.asarray(color(frame) * 255, dtype=np.uint8) 
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    return frame
+    
 class TauCamera:
     def __init__(self, license_path):
         # Load the shared library
@@ -94,7 +104,7 @@ def main():
                 if raw_data is not None:
                     # Process and display the captured frame
                     tau_image = np.asarray(raw_data, dtype=np.uint16)
-                    tau_image = utils.apply_plasma_colormap(tau_image)
+                    tau_image = apply_plasma_colormap(tau_image)
                     visual_tau_pic = cv2.resize(tau_image, (640, 480))
 
                     cv2.imshow("Tau Frame", visual_tau_pic)  # Display the frame
