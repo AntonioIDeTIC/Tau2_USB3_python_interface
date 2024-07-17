@@ -5,7 +5,6 @@ import numpy as np
 import cv2
 import matplotlib
 
-
 def apply_colormap(frame, cmap, clahe):
     frame = np.asarray(normalize(frame, np.min(frame), np.max(frame), 0, 255), dtype=np.uint8)
     frame = clahe.apply(frame)
@@ -107,7 +106,7 @@ def main():
                 if raw_data is not None:
                     # Process and display the captured frame
                     tau_image = np.asarray(raw_data, dtype=np.uint16)
-                    tau_image = apply_plasma_colormap(tau_image, 'plasma', clahe)
+                    tau_image = apply_colormap(tau_image, 'plasma', clahe)
                     visual_tau_pic = cv2.resize(tau_image, (640, 480))
 
                     cv2.imshow("Tau Frame", visual_tau_pic)  # Display the frame
