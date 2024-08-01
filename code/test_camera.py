@@ -4,16 +4,7 @@ import time
 import numpy as np
 import cv2
 import matplotlib
-
-def apply_colormap(frame, cmap, clahe):
-    frame = np.asarray(normalize(frame, np.min(frame), np.max(frame), 0, 255), dtype=np.uint8)
-    frame = clahe.apply(frame)
-    frame = np.asarray(normalize(frame, np.min(frame), np.max(frame), 0, 1.0), dtype=np.float32)
-
-    color = matplotlib.colormaps.get_cmap(cmap)
-    frame = np.asarray(color(frame) * 255, dtype=np.uint8) 
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    return frame
+from utils import normalize, apply_colormap
     
 class TauCamera:
     def __init__(self, license_path):
